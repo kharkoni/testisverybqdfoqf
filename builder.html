@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio Builder</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <!-- Left: Generator -->
+    <div class="card generator">
+      <header>
+        <h1>Portfolio Generator</h1>
+        <div class="hint">Fill the steps. Your preview updates live on the right.</div>
+      </header>
+
+      <div class="stepper" id="stepper"></div>
+      <div class="content" id="steps"></div>
+
+      <div class="actions">
+        <button class="btn btn-secondary" id="backBtn">Back</button>
+        <button class="btn btn-secondary" id="skipBtn" style="display:none">Skip</button>
+        <button class="btn btn-primary" id="nextBtn">Next</button>
+      </div>
+    </div>
+
+    <!-- Right: Live Preview -->
+    <div class="card preview-card">
+      <header>
+        <h2>Live Preview</h2>
+        <div class="hint">Full-height preview mirrors your settings (mobile friendly).</div>
+      </header>
+      <div class="preview-wrap">
+        <iframe id="preview" title="Portfolio Preview" sandbox="allow-scripts allow-same-origin"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <footer>Powered by alqulol</footer>
+
+  <!-- deps -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+  <!-- app -->
+  <script src="script.js"></script>
+</body>
+</html>
